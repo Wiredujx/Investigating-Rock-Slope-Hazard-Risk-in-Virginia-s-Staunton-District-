@@ -146,9 +146,9 @@ using Microsoft Excel. The null hypothesis (H₀) states that county and risk cl
 each county. The table has 10 counties and 3 risk categories, resulting in 18 degrees of freedom, calculated from the formula, where r is the
 number of rows and c is the number of columns. Table 4 presents the expected frequencies for each county and risk category using the formula:  
 
-\[
+$$
 E = \frac{\text{County Total} \times \text{Risk Total}}{\text{Grand Total}}
-\]
+$$
 
 Table 5 summarizes the chi-squared test results. The calculated chi-square statistic is 34.46, with a corresponding p-value of 0.0110. At a
 significance level of 0.05, the p-value is sufficiently small to reject the null hypothesis. This suggests that there is a significant
