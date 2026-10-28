@@ -1,14 +1,18 @@
-Investigating Rock Slope Hazard Risk in Virginia's Staunton District 
+<div align="center">
 
-Project Group 24—Computational Masters 
+# Investigating Rock Slope Hazard Risk in Virginia's Staunton District
 
-Treshaun T., Jayden W., Nathan Y. 
+Project Group 24—Computational Masters
 
-Department of Engineering, James Madison University 
+Treshaun T., Jayden W., Nathan Y.
 
-Computational Methods in Engineering (ENGR 315), SECTION 003 
+Department of Engineering, James Madison University
+
+Computational Methods in Engineering (ENGR 315), SECTION 003
 
 Dr. Mercy Adeyemi-Kayode
+
+</div>
 
 INTRODUCTION 
 
@@ -129,7 +133,7 @@ using Microsoft Excel. The null hypothesis (H₀) states that county and risk cl
 each county. The table has 10 counties and 3 risk categories, resulting in 18 degrees of freedom, calculated from the formula, where r is the
 number of rows and c is the number of columns. Table 4 presents the expected frequencies for each county and risk category using the formula:  
 
-                    E = (County Total × Risk Total) / Grand Total
+                    E = \frac{\text{County Total} \times \text{Risk Total}}{\text{Grand Total}}
 
 Table 5 summarizes the chi-squared test results. The calculated chi-square statistic is 34.46, with a corresponding p-value of 0.0110. At a
 significance level of 0.05, the p-value is sufficiently small to reject the null hypothesis. This suggests that there is a significant
