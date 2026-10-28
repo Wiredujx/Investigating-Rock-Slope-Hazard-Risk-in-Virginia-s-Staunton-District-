@@ -75,6 +75,11 @@ Figure 1 is an example of how all the data on Risk and Clast types can be repres
 allow us to find the clast types that are common in high-risk areas. Spheroidal is the most common type in high-risk areas, followed by Discoidal.
 There are no cylindrical type clasts in high-risk zones.  
 
+<p align="center">
+<img width="819" height="510" alt="image" src="https://github.com/user-attachments/assets/eb19572b-dcab-42a9-a988-b4e9f80870ea" /><br>
+<b>Figure 1: Total Risk Per Clast Type</b>
+</p>
+
 Metrics: 
     Frequency of clast types 
     Frequency of clast sizes 
