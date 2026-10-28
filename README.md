@@ -14,6 +14,8 @@ Dr. Mercy Adeyemi-Kayode
 
 </div>
 
+---
+
 INTRODUCTION 
 
 For Computational Methods in Engineering (ENGR 315) at James Madison University, a final culminating assignment towards the end of the semester was 
@@ -61,7 +63,8 @@ A chi-square test for independence can be performed using county and risk classi
 differs significantly among counties. This analysis may help determine if differences in county-level risk concentrations are statistically 
 meaningful rather than random variation.  
 
- 
+---
+
 IMPLEMENTATION DETAILS
 
 Question 3: Clast Type Analysis 
@@ -69,6 +72,11 @@ Question 3: Clast Type Analysis
 Figure 1 is an example of how all the data on Risk and Clast types can be represented as a distribution of clast type to its risk factor. This will 
 allow us to find the clast types that are common in high-risk areas. Spheroidal is the most common type in high-risk areas, followed by Discoidal.
 There are no cylindrical type clasts in high-risk zones.  
+
+<p align="center">
+<img width="819" height="510" alt="image" src="https://github.com/user-attachments/assets/eb19572b-dcab-42a9-a988-b4e9f80870ea" /><br>
+<b>Figure 1: Total Risk Per Clast Type</b>
+</p>
 
 Metrics: 
     Frequency of clast types 
@@ -98,6 +106,11 @@ Question 4: Qualitative Risk Matrix Analysis
 Figure 2 provides a visual representation of the relationship between Probability and Impact classifications within the rock slope inventory.
 The matrix may help identify combinations that most frequently contribute to overall risk classifications and provide additional insight into
 the qualitative risk assessment process used throughout the dataset. 
+
+<p align="center">
+<img width="725" height="194" alt="image" src="https://github.com/user-attachments/assets/8bcfb501-e020-41c6-951b-b92c1bfb7e4b" /><br>
+<b>Figure 2: Qualitative Risk Matrix</b>
+</p>
 
 Metrics: 
 
