@@ -109,6 +109,11 @@ Figure 2 provides a visual representation of the relationship between Probabilit
 The matrix may help identify combinations that most frequently contribute to overall risk classifications and provide additional insight into
 the qualitative risk assessment process used throughout the dataset. 
 
+<p align="center">
+<img width="725" height="194" alt="image" src="https://github.com/user-attachments/assets/8bcfb501-e020-41c6-951b-b92c1bfb7e4b" /><br>
+<b>Figure 2: Qualitative Risk Matrix</b>
+</p>
+
 Metrics: 
 
     Frequency of probability classifications 
