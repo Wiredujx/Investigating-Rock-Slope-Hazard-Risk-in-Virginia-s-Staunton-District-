@@ -7,6 +7,12 @@ def importData():
     #print(rock_slopes.head(5).to_string())
     return rock_slopes
 
+def chiSquared():
+    return
+
+def monteCarlo():
+    return
+
 def main():
     importData()
 

@@ -33,7 +33,7 @@ Relevant information from the dataset will be incorporated to analyze the qualit
 with the highest-risk slopes, identify any variance of the measured properties of slopes in the dataset, and show use of location identifiers to compare 
 locations. The following table (Table 1) is a snippet of the following dataset. It contains location identifiers, observed characteristics, and qualitative 
 identifiers of risk (Probability, impact, and total risk).
-
+<div align="center">
 Table 1 — Snippet of rock slope data
 
 |   County  |  Latitude | Longitude  | Height (ft) | Length (ft) | Slope (°) | Clast Size (cy) | Clast Type | Probability | Impact |
@@ -42,7 +42,7 @@ Table 1 — Snippet of rock slope data
 | Alleghany | 37.811385 | -79.798305 |     79.4    |     300     |   78.8    |        8        | Spheroidal |     High    | High   |
 | Alleghany | 37.808559 | -79.797059 |     65.4    |     400     |   87.2    |        8        | Spheroidal |     High    | High   |
 | Alleghany | 37.73331  | -80.22598  |     45.8    |     450     |   61.8    |        4        | Discoidal  |     High    | Medium |
-
+</div>
 CHOSEN QUESTIONS 
 
 3. What clast types and sizes are most common in high-risk rock slope areas?  
@@ -132,9 +132,11 @@ using Microsoft Excel. The null hypothesis (H₀) states that county and risk cl
 (Hₐ) states risk classification is associated with county. Table 3 presents the observed counts of high, medium, and low risk rock slopes for
 each county. The table has 10 counties and 3 risk categories, resulting in 18 degrees of freedom, calculated from the formula, where r is the
 number of rows and c is the number of columns. Table 4 presents the expected frequencies for each county and risk category using the formula:  
-
-                    E = \frac{\text{County Total} \times \text{Risk Total}}{\text{Grand Total}}
-
+<div align="center">
+$$
+E = \frac{\text{County Total} \times \text{Risk Total}}{\text{Grand Total}}
+$$
+</div>
 Table 5 summarizes the chi-squared test results. The calculated chi-square statistic is 34.46, with a corresponding p-value of 0.0110. At a
 significance level of 0.05, the p-value is sufficiently small to reject the null hypothesis. This suggests that there is a significant
 association between county and risk classification.  
@@ -150,7 +152,7 @@ should be interpreted with caution.
 A Monte Carlo simulation was also performed in excel. With 100,000 replicants, the Monte Carlo p-value was 0.010180. This was consistent with
 the chi-squared test, suggesting that there is an association between county and risk level. 
 
-
+<div align="center">
 Table 4 –Count of Risk per County (Observed Frequency) 
 
 | County     | High | Medium | Low | Total |
@@ -166,9 +168,9 @@ Table 4 –Count of Risk per County (Observed Frequency)
 | Shenandoah | 4    | 14     | 7   | 25    |
 | Warren     | 1    | 3      | 3   | 7     |
 | Total      | 48   | 121    | 149 | 318   |
+</div>
 
-
-
+<div align="center">
 Table 5 –Expected frequency 
 
 | County     | High        | Medium      | Low         |
@@ -183,14 +185,14 @@ Table 5 –Expected frequency
 | Rockingham | 3.622641509 | 9.132075472 | 11.24528302 |
 | Shenandoah | 3.773584906 | 9.512578616 | 11.71383648 |
 | Warren     | 1.056603774 | 2.663522013 | 3.279874214 |
-
-
+</div>
+<div align="center">
 Table 6 –χ2 and p-value (Chi-Square Results) 
 
 | CHI-SQ statistic | P-value    |
 | ---------------- | ---------- |
 | 34.45993219      | 0.01104507 |
-
+</div>
 
 Metrics: 
 
