@@ -14,6 +14,8 @@ Dr. Mercy Adeyemi-Kayode
 
 </div>
 
+---
+
 INTRODUCTION 
 
 For Computational Methods in Engineering (ENGR 315) at James Madison University, a final culminating assignment towards the end of the semester was 
@@ -43,6 +45,8 @@ Table 1 — Snippet of rock slope data
 | Alleghany | 37.808559 | -79.797059 |     65.4    |     400     |   87.2    |        8        | Spheroidal |     High    | High   |
 | Alleghany | 37.73331  | -80.22598  |     45.8    |     450     |   61.8    |        4        | Discoidal  |     High    | Medium |
 
+---
+
 CHOSEN QUESTIONS 
 
 3. What clast types and sizes are most common in high-risk rock slope areas?  
@@ -61,7 +65,8 @@ A chi-square test for independence can be performed using county and risk classi
 differs significantly among counties. This analysis may help determine if differences in county-level risk concentrations are statistically 
 meaningful rather than random variation.  
 
- 
+---
+
 IMPLEMENTATION DETAILS
 
 Question 3: Clast Type Analysis 
