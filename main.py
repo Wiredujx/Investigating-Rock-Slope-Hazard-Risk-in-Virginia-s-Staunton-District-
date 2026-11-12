@@ -1,5 +1,6 @@
 import pandas as pd
-from scipy.stats import chi2_contingency
+import numpy as np
+from scipy.stats import chi2_contingency, random_table
 
 alpha = 0.05
 
@@ -54,27 +55,58 @@ def chiSquared(rock_slopes):
 
     if(bins_five_percent > 30):
         print("The number of bins that contain a number less then 5 is more than 30%, interpret results with caution.")
-        print("Use another statistical tool to reenforce results")
+        print("Use another statistical tool to reenforce results.")
 
     
     #hypothesis
     print("Null hypothesis: There is not an association between county and risk classification.")
     print("Alternative hypothesis: There is an association between county and risk classification.")
     if (p < alpha):
-        print("Reject the null hypothesis.")
+        print("\nChi2 result: the p-value is less than alpha, reject the null hypothosis.")
     else:
-        print("Accept the null hypothesis.")
+        print("\nChi2 result: the p-value is greater than alpha, fail to reject the null hypothesis.\n")
 
     
 
-    return
+    return risk_summary
 
-def monteCarlo():
+def monteCarlo(risk_summary):
+    n_simulations = 100000
+    rng = np.random.default_rng(42)
+
+    chi2_observed,_,_,expected = chi2_contingency(risk_summary, correction=False)
+
+    rows_totals = risk_summary.sum(axis=1)
+    columns_totals = risk_summary.sum(axis=0)
+
+    simulated_tables = random_table.rvs(rows_totals, columns_totals, size=n_simulations, random_state=rng)
+    
+    expected = np.outer(rows_totals, columns_totals)/risk_summary.values.sum()
+
+    simulated_chi2=np.sum((simulated_tables - expected)**2/expected, axis=(1,2))
+
+    p = (1+np.sum(simulated_chi2 >= chi2_observed))/(n_simulations+1)
+
+    print("\n\n\n Monte Carlo test. \n\n")
+    print("Observed chi2: ", chi2_observed)
+    print("number of simulations: ", n_simulations)
+    print("monte carlo p-vaule: ", p)
+
+    #hypothesis
+    print("Null hypothesis: There is not an association between county and risk classification.")
+    print("Alternative hypothesis: There is an association between county and risk classification.")
+    if (p < alpha):
+        print("\nChi2 result: the p-value is less than alpha, reject the null hypothosis.")
+    else:
+        print("\nChi2 result: the p-value is greater than alpha, fail to reject the null hypothesis.\n")
+    
+    
     return
 
 def main():
     rock_slopes = importData()
-    chiSquared(rock_slopes)
+    risk_summary = chiSquared(rock_slopes)
+    monteCarlo(risk_summary)
 
 if __name__ == "__main__":
     main()
