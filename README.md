@@ -260,7 +260,9 @@ Table 7 –Python Compiled Count of Risk per County (Observed Frequency)
 </div>
 
 Chi-square statistic: 35.41223593395713
+
 P-value: 0.01801547973991742
+
 Degrees of freedom: 20
 
 Table 8 summarizes the chi-squared test results from the python script. The calculated chi-square statistic is 34.46, with a 
@@ -286,6 +288,7 @@ Table 8 –Python Compiled Expected Frequency
 </div>
 
 Bins with expected count < 5: 12
+
 Percentage of bins with expected count < 5: 36.36363636363637
 
 However, a limitation of the analysis is that approximately 36% of cells have an expected frequency below 5. With the chi-squared test, it is
@@ -293,7 +296,9 @@ expected that at least 80% of the cells have a value of 5 or greater. With 36% o
 should be interpreted with caution.
 
 Null hypothesis: There is not an association between county and risk classification.
+
 Alternative hypothesis: There is an association between county and risk classification.
+
 Chi2 result: the p-value is less than alpha, reject the null hypothosis.
 
 
@@ -301,10 +306,15 @@ A Monte Carlo simulation was also performed in excel. With 100,000 replicants, t
 the chi-squared test, suggesting that there is an association between county and risk level. 
 
 Observed chi2:  35.41223593395713
-number of simulations:  100000
-monte carlo p-vaule:  0.016949830501694983
+
+Number of simulations:  100000
+
+Monte Carlo p-vaule:  0.016949830501694983
+
 Null hypothesis: There is not an association between county and risk classification.
+
 Alternative hypothesis: There is an association between county and risk classification.
+
 Chi2 result: the p-value is less than alpha, reject the null hypothosis.
 
 Figure 3 provides a visual representation of the accuracy and precision of the results. The Pearson Residual Heat map shows outliers in the expected vs observed counts. The Rockbridge and Highland High Risk counts are outliers compared to the rest with the absolute value of the residual being greater than 2.
@@ -313,7 +323,7 @@ The Monte Carlo Chi-square Null distribution is a visualization of the 100000 si
 
 <p align="center">
 <img width="1260" height="510" alt="image" src="results_for_question_5.png" /><br>
-<b>Figure 3: County vs. Risk Classification Pearson Residual Heatmap & Monte Carlo Chi-square Null Distribution/b>
+<b>Figure 3: County vs. Risk Classification Pearson Residual Heatmap & Monte Carlo Chi-square Null Distribution</b>>
 </p>
 
 CONCLUSIONS 
