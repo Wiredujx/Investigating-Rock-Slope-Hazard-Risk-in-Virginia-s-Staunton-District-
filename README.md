@@ -243,7 +243,7 @@ RESULTS
 
 Question 5:
 
- <div align="center">
+<div align="center">
 Table 7 –Python Compiled Count of Risk per County (Observed Frequency)
 
 |County     |Low | Medium | High |   
@@ -269,7 +269,7 @@ Table 8 summarizes the chi-squared test results from the python script. The calc
 corresponding p-value of 0.0180. At a significance level of 0.05, the p-value is sufficiently small to reject the null hypothesis. 
 This suggests that there is a significant association between county and risk classification.  
               
-
+<div align="center">
 Table 8 –Python Compiled Expected Frequency 
 
 |County     | Low   |  Medium | High |
