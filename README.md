@@ -262,6 +262,10 @@ Table 7 –Python Compiled Count of Risk per County (Observed Frequency)
 Chi-square statistic: 35.41223593395713
 P-value: 0.01801547973991742
 Degrees of freedom: 20
+
+Table 8 summarizes the chi-squared test results from the python script. The calculated chi-square statistic is 34.46, with a 
+corresponding p-value of 0.0180. At a significance level of 0.05, the p-value is sufficiently small to reject the null hypothesis. 
+This suggests that there is a significant association between county and risk classification.  
               
 <div align="center">
 Table 8 –Python Compiled Expected Frequency 
@@ -283,14 +287,18 @@ Table 8 –Python Compiled Expected Frequency
 
 Bins with expected count < 5: 12
 Percentage of bins with expected count < 5: 36.36363636363637
-The number of bins that contain a number less then 5 is more than 30%, interpret results with caution.
-Use another statistical tool to reenforce results.
+
+However, a limitation of the analysis is that approximately 36% of cells have an expected frequency below 5. With the chi-squared test, it is
+expected that at least 80% of the cells have a value of 5 or greater. With 36% of the cells being below a count of 5, the results
+should be interpreted with caution.
+
 Null hypothesis: There is not an association between county and risk classification.
 Alternative hypothesis: There is an association between county and risk classification.
 Chi2 result: the p-value is less than alpha, reject the null hypothosis.
 
 
- Monte Carlo test. 
+A Monte Carlo simulation was also performed in excel. With 100,000 replicants, the Monte Carlo p-value was 0.0169. This was consistent with
+the chi-squared test, suggesting that there is an association between county and risk level. 
 
 Observed chi2:  35.41223593395713
 number of simulations:  100000
@@ -299,9 +307,13 @@ Null hypothesis: There is not an association between county and risk classificat
 Alternative hypothesis: There is an association between county and risk classification.
 Chi2 result: the p-value is less than alpha, reject the null hypothosis.
 
+Figure 3 provides a visual representation of the accuracy and precision of the results. The Pearson Residual Heat map shows outliers in the expected vs observed counts. The Rockbridge and Highland High Risk counts are outliers compared to the rest with the absolute value of the residual being greater than 2.
+
+The Monte Carlo Chi-square Null distribution is a visualization of the 100000 simulations under the null hypothesis, represented by the blue histogram. The Chi-square statistic is represented by the red dashed line. The Monte Carlo p-value is represented by the shaded red region. Approximately 1.69% (p-value 0.0169) of the simulations fall in the shaded red region, visualizing the 1.69% of the simulated chi-square statistics were equal to or greater than the observed statistic.
+
 <p align="center">
 <img width="1260" height="510" alt="image" src="results_for_question_5.png" /><br>
-<b>Figure 2: Qualitative Risk Matrix</b>
+<b>Figure 3: County vs. Risk Classification Pearson Residual Heatmap & Monte Carlo Chi-square Null Distribution/b>
 </p>
 
 CONCLUSIONS 
