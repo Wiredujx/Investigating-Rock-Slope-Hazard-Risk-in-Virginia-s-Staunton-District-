@@ -36,7 +36,8 @@ with the highest-risk slopes, identify any variance of the measured properties o
 locations. The following table (Table 1) is a snippet of the following dataset. It contains location identifiers, observed characteristics, and qualitative 
 identifiers of risk (Probability, impact, and total risk).
 
-### Table 1 — Snippet of rock slope data
+<div align="center">
+Table 1 — Snippet of rock slope data
 
 |   County  |  Latitude | Longitude  | Height (ft) | Length (ft) | Slope (°) | Clast Size (cy) | Clast Type | Probability | Impact |
 |-----------|-----------|------------|-------------|-------------|-----------|-----------------|------------|-------------|--------|
@@ -44,6 +45,7 @@ identifiers of risk (Probability, impact, and total risk).
 | Alleghany | 37.811385 | -79.798305 |     79.4    |     300     |   78.8    |        8        | Spheroidal |     High    | High   |
 | Alleghany | 37.808559 | -79.797059 |     65.4    |     400     |   87.2    |        8        | Spheroidal |     High    | High   |
 | Alleghany | 37.73331  | -80.22598  |     45.8    |     450     |   61.8    |        4        | Discoidal  |     High    | Medium |
+</div>
 
 CHOSEN QUESTIONS 
 
@@ -165,7 +167,8 @@ should be interpreted with caution.
 A Monte Carlo simulation was also performed in excel. With 100,000 replicants, the Monte Carlo p-value was 0.010180. This was consistent with
 the chi-squared test, suggesting that there is an association between county and risk level. 
 
-### Table 4 –Count of Risk per County (Observed Frequency) 
+<div align="center">
+Table 4 –Count of Risk per County (Observed Frequency) 
 
 | County     | High | Medium | Low | Total |
 | ---------- | ---- | ------ | --- | ----- |
@@ -180,9 +183,10 @@ the chi-squared test, suggesting that there is an association between county and
 | Shenandoah | 4    | 14     | 7   | 25    |
 | Warren     | 1    | 3      | 3   | 7     |
 | Total      | 48   | 121    | 149 | 318   |
+</div>
 
-
-### Table 5 –Expected frequency 
+<div align="center">
+Table 5 –Expected frequency 
 
 | County     | High        | Medium      | Low         |
 | ---------- | ----------- | ----------- | ----------- |
@@ -196,14 +200,15 @@ the chi-squared test, suggesting that there is an association between county and
 | Rockingham | 3.622641509 | 9.132075472 | 11.24528302 |
 | Shenandoah | 3.773584906 | 9.512578616 | 11.71383648 |
 | Warren     | 1.056603774 | 2.663522013 | 3.279874214 |
+</div>
 
-
-### Table 6 –χ2 and p-value (Chi-Square Results) 
+<div align="center">
+Table 6 –χ2 and p-value (Chi-Square Results) 
 
 | CHI-SQ statistic | P-value    |
 | ---------------- | ---------- |
 | 34.45993219      | 0.01104507 |
-
+</div>
 
 Metrics: 
 
@@ -238,7 +243,8 @@ RESULTS
 
 Question 5:
 
-### Table 7 – Python Compiled Count of Risk per County (Observed Frequency)
+ <div align="center">
+Table 7 –Python Compiled Count of Risk per County (Observed Frequency)
 
 |County     |Low | Medium | High |   
 |-----------|----|--------|------|             
@@ -253,7 +259,7 @@ Question 5:
 |Rockingham |  10|       8|     6|
 |Shenandoah |   7|      14|     4|
 |Warren     |   3|       3|     2|
-
+</div>
 
 - Chi-square statistic: 35.41223593395713  
 - P-value: 0.01801547973991742  
@@ -264,7 +270,7 @@ corresponding p-value of 0.0180. At a significance level of 0.05, the p-value is
 This suggests that there is a significant association between county and risk classification.  
               
 
-### Table 8 – Python Compiled Expected Frequency 
+Table 8 –Python Compiled Expected Frequency 
 
 |County     | Low   |  Medium | High |
 |-----------|-------|---------|------|               
@@ -279,6 +285,7 @@ This suggests that there is a significant association between county and risk cl
 |Rockingham | 11.22 |   9.21  | 3.57 |
 |Shenandoah | 11.69 |  9.60   | 3.72 |
 |Warren     |  3.74 |   3.07  | 1.19 |
+</div>
 
 - Bins with expected count < 5: 12  
 - Percentage of bins with expected count < 5: 36.36363636363637  
@@ -308,7 +315,7 @@ The Monte Carlo Chi-square Null distribution is a visualization of the 100000 si
 
 <p align="center">
 <img width="1260" height="510" alt="image" src="results_for_question_5.png" /><br>
-<b>Figure 3: County vs. Risk Classification Pearson Residual Heatmap & Monte Carlo Chi-square Null Distribution</b>>
+<b>Figure 3: County vs. Risk Classification Pearson Residual Heatmap & Monte Carlo Chi-square Null Distribution</b>
 </p>
 
 CONCLUSIONS 
