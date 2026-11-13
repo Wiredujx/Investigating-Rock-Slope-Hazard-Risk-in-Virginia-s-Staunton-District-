@@ -199,6 +199,7 @@ Table 5 –Expected frequency
 | Shenandoah | 3.773584906 | 9.512578616 | 11.71383648 |
 | Warren     | 1.056603774 | 2.663522013 | 3.279874214 |
 </div>
+
 <div align="center">
 Table 6 –χ2 and p-value (Chi-Square Results) 
 
@@ -256,6 +257,7 @@ Table 7 –Python Compiled Count of Risk per County (Observed Frequency)
 |Rockingham |  10|       8|     6|
 |Shenandoah |   7|      14|     4|
 |Warren     |   3|       3|     2|
+</div>
 
 Chi-square statistic: 35.41223593395713
 P-value: 0.01801547973991742
@@ -277,6 +279,7 @@ Table 8 –Python Compiled Expected Frequency
 |Rockingham | 11.22 |   9.21  | 3.57 |
 |Shenandoah | 11.69 |  9.60   | 3.72 |
 |Warren     |  3.74 |   3.07  | 1.19 |
+</div>
 
 Bins with expected count < 5: 12
 Percentage of bins with expected count < 5: 36.36363636363637
