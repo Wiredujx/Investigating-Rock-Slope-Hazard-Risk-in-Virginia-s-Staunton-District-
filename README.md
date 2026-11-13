@@ -35,8 +35,8 @@ Relevant information from the dataset will be incorporated to analyze the qualit
 with the highest-risk slopes, identify any variance of the measured properties of slopes in the dataset, and show use of location identifiers to compare 
 locations. The following table (Table 1) is a snippet of the following dataset. It contains location identifiers, observed characteristics, and qualitative 
 identifiers of risk (Probability, impact, and total risk).
-<div align="center">
-Table 1 — Snippet of rock slope data
+
+### Table 1 — Snippet of rock slope data
 
 |   County  |  Latitude | Longitude  | Height (ft) | Length (ft) | Slope (°) | Clast Size (cy) | Clast Type | Probability | Impact |
 |-----------|-----------|------------|-------------|-------------|-----------|-----------------|------------|-------------|--------|
@@ -44,7 +44,7 @@ Table 1 — Snippet of rock slope data
 | Alleghany | 37.811385 | -79.798305 |     79.4    |     300     |   78.8    |        8        | Spheroidal |     High    | High   |
 | Alleghany | 37.808559 | -79.797059 |     65.4    |     400     |   87.2    |        8        | Spheroidal |     High    | High   |
 | Alleghany | 37.73331  | -80.22598  |     45.8    |     450     |   61.8    |        4        | Discoidal  |     High    | Medium |
-</div>
+
 CHOSEN QUESTIONS 
 
 3. What clast types and sizes are most common in high-risk rock slope areas?  
@@ -165,8 +165,7 @@ should be interpreted with caution.
 A Monte Carlo simulation was also performed in excel. With 100,000 replicants, the Monte Carlo p-value was 0.010180. This was consistent with
 the chi-squared test, suggesting that there is an association between county and risk level. 
 
-<div align="center">
-Table 4 –Count of Risk per County (Observed Frequency) 
+### Table 4 –Count of Risk per County (Observed Frequency) 
 
 | County     | High | Medium | Low | Total |
 | ---------- | ---- | ------ | --- | ----- |
@@ -181,10 +180,9 @@ Table 4 –Count of Risk per County (Observed Frequency)
 | Shenandoah | 4    | 14     | 7   | 25    |
 | Warren     | 1    | 3      | 3   | 7     |
 | Total      | 48   | 121    | 149 | 318   |
-</div>
 
-<div align="center">
-Table 5 –Expected frequency 
+
+### Table 5 –Expected frequency 
 
 | County     | High        | Medium      | Low         |
 | ---------- | ----------- | ----------- | ----------- |
@@ -198,15 +196,14 @@ Table 5 –Expected frequency
 | Rockingham | 3.622641509 | 9.132075472 | 11.24528302 |
 | Shenandoah | 3.773584906 | 9.512578616 | 11.71383648 |
 | Warren     | 1.056603774 | 2.663522013 | 3.279874214 |
-</div>
 
-<div align="center">
-Table 6 –χ2 and p-value (Chi-Square Results) 
+
+### Table 6 –χ2 and p-value (Chi-Square Results) 
 
 | CHI-SQ statistic | P-value    |
 | ---------------- | ---------- |
 | 34.45993219      | 0.01104507 |
-</div>
+
 
 Metrics: 
 
@@ -241,8 +238,7 @@ RESULTS
 
 Question 5:
 
- <div align="center">
-Table 7 –Python Compiled Count of Risk per County (Observed Frequency)
+### Table 7 – Python Compiled Count of Risk per County (Observed Frequency)
 
 |County     |Low | Medium | High |   
 |-----------|----|--------|------|             
@@ -257,18 +253,18 @@ Table 7 –Python Compiled Count of Risk per County (Observed Frequency)
 |Rockingham |  10|       8|     6|
 |Shenandoah |   7|      14|     4|
 |Warren     |   3|       3|     2|
-</div>
 
-Chi-square statistic: 35.41223593395713
-P-value: 0.01801547973991742
-Degrees of freedom: 20
+
+- Chi-square statistic: 35.41223593395713  
+- P-value: 0.01801547973991742  
+- Degrees of freedom: 20  
 
 Table 8 summarizes the chi-squared test results from the python script. The calculated chi-square statistic is 34.46, with a 
 corresponding p-value of 0.0180. At a significance level of 0.05, the p-value is sufficiently small to reject the null hypothesis. 
 This suggests that there is a significant association between county and risk classification.  
               
-<div align="center">
-Table 8 –Python Compiled Expected Frequency 
+
+### Table 8 – Python Compiled Expected Frequency 
 
 |County     | Low   |  Medium | High |
 |-----------|-------|---------|------|               
@@ -283,11 +279,9 @@ Table 8 –Python Compiled Expected Frequency
 |Rockingham | 11.22 |   9.21  | 3.57 |
 |Shenandoah | 11.69 |  9.60   | 3.72 |
 |Warren     |  3.74 |   3.07  | 1.19 |
-</div>
 
-Bins with expected count < 5: 12
-
-Percentage of bins with expected count < 5: 36.36363636363637
+- Bins with expected count < 5: 12  
+- Percentage of bins with expected count < 5: 36.36363636363637  
 
 However, a limitation of the analysis is that approximately 36% of cells have an expected frequency below 5. With the chi-squared test, it is
 expected that at least 80% of the cells have a value of 5 or greater. With 36% of the cells being below a count of 5, the results
@@ -301,12 +295,12 @@ Chi2 result: the p-value is less than alpha, reject the null hypothosis.
 A Monte Carlo simulation was also performed in excel. With 100,000 replicants, the Monte Carlo p-value was 0.0169. This was consistent with
 the chi-squared test, suggesting that there is an association between county and risk level. 
 
-Observed chi2:  35.41223593395713
-Number of simulations:  100000
-Monte Carlo p-vaule:  0.016949830501694983
-Null hypothesis: There is not an association between county and risk classification.
-Alternative hypothesis: There is an association between county and risk classification.
-Chi2 result: the p-value is less than alpha, reject the null hypothosis.
+- Observed chi2:  35.41223593395713  
+- Number of simulations:  100000  
+- Monte Carlo p-vaule:  0.016949830501694983  
+- Null hypothesis: There is not an association between county and risk classification.  
+- Alternative hypothesis: There is an association between county and risk classification.  
+- Chi2 result: the p-value is less than alpha, reject the null hypothosis.  
 
 Figure 3 provides a visual representation of the accuracy and precision of the results. The Pearson Residual Heat map shows outliers in the expected vs observed counts. The Rockbridge and Highland High Risk counts are outliers compared to the rest with the absolute value of the residual being greater than 2.
 
