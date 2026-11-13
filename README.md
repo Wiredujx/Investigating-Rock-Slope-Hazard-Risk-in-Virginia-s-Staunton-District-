@@ -238,7 +238,68 @@ Visualization:
 
 RESULTS 
 
-(To be completed during PHASE II) 
+Question 5:
+
+ <div align="center">
+Table 7 –Python Compiled Count of Risk per County (Observed Frequency)
+
+|County     |Low | Medium | High |   
+|-----------|----|--------|------|             
+|Alleghany  |  28|      22|     6|
+|Augusta    |   7|      11|     7|
+|Bath       |  21|      12|     4|
+|Clarke     |   2|       3|     0|
+|Frederick  |  10|       9|     1|
+|Highland   |  28|      14|     0|
+|Page       |   6|       5|     0|
+|Rockbridge |  29|      23|    18|
+|Rockingham |  10|       8|     6|
+|Shenandoah |   7|      14|     4|
+|Warren     |   3|       3|     2|
+
+Chi-square statistic: 35.41223593395713
+P-value: 0.01801547973991742
+Degrees of freedom: 20
+              
+<div align="center">
+Table 8 –Python Compiled Expected Frequency 
+
+|County     | Low   |  Medium | High |
+|-----------|-------|---------|------|               
+|Alleghany  | 26.18 |  21.50  | 8.32 |
+|Augusta    | 11.69 |   9.60  | 3.72 |
+|Bath       | 17.30 |  14.20  | 5.50 |
+|Clarke     |  2.34 |   1.92  | 0.74 |
+|Frederick  |  9.35 |   7.68  | 2.97 |
+|Highland   | 19.63 |  16.12  | 6.24 |
+|Page       |  5.14 |   4.22  | 1.63 |
+|Rockbridge | 32.72 |  26.87  |10.40 |
+|Rockingham | 11.22 |   9.21  | 3.57 |
+|Shenandoah | 11.69 |  9.60   | 3.72 |
+|Warren     |  3.74 |   3.07  | 1.19 |
+
+Bins with expected count < 5: 12
+Percentage of bins with expected count < 5: 36.36363636363637
+The number of bins that contain a number less then 5 is more than 30%, interpret results with caution.
+Use another statistical tool to reenforce results.
+Null hypothesis: There is not an association between county and risk classification.
+Alternative hypothesis: There is an association between county and risk classification.
+Chi2 result: the p-value is less than alpha, reject the null hypothosis.
+
+
+ Monte Carlo test. 
+
+Observed chi2:  35.41223593395713
+number of simulations:  100000
+monte carlo p-vaule:  0.016949830501694983
+Null hypothesis: There is not an association between county and risk classification.
+Alternative hypothesis: There is an association between county and risk classification.
+Chi2 result: the p-value is less than alpha, reject the null hypothosis.
+
+<p align="center">
+<img width="1260" height="510" alt="image" src="results_for_question_5.png" /><br>
+<b>Figure 2: Qualitative Risk Matrix</b>
+</p>
 
 CONCLUSIONS 
 
