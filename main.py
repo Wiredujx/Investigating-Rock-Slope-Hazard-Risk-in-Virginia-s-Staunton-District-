@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency, random_table
 
 alpha = 0.05
@@ -66,9 +68,11 @@ def chiSquared(rock_slopes):
     else:
         print("\nChi2 result: the p-value is greater than alpha, fail to reject the null hypothesis.\n")
 
+    residuals=(risk_summary.values - expected)/np.sqrt(expected)
+    residuals_df = pd.DataFrame(residuals, index=risk_summary.index, columns=risk_summary.columns)
     
 
-    return risk_summary
+    return risk_summary, residuals_df
 
 def monteCarlo(risk_summary):
     n_simulations = 100000
@@ -101,12 +105,76 @@ def monteCarlo(risk_summary):
         print("\nChi2 result: the p-value is greater than alpha, fail to reject the null hypothesis.\n")
     
     
+    return simulated_chi2, chi2_observed, p
+
+def gui(residuals_df, simulated_chi2, chi2_observed, p):
+
+    fig, axes = plt.subplots(1,2,figsize=(17,7))
+
+    #residuals heatmap
+    sns.heatmap(
+    residuals_df,
+    annot=True,
+    fmt=".2f",
+    cmap="RdBu_r",
+    center=0,
+    linewidths=0.5,
+    cbar_kws={"label": "Pearson Residual"},
+    ax=axes[0]
+    )
+
+    axes[0].set_title("County vs. Risk Classification\nPearson Residual Heatmap")
+    axes[0].set_xlabel("Risk Classification")
+    axes[0].set_ylabel("County")
+
+    #Monte carlo distribution
+
+    axes[1].hist(
+        simulated_chi2,
+        bins=60,
+        density=True,
+        color="steelblue",
+        edgecolor="white",
+        alpha=0.8
+    )
+
+    # Observed chi-square statistic
+    axes[1].axvline(
+        chi2_observed,
+        color="red",
+        linestyle="--",
+        linewidth=2,
+        label=f"Observed Chi-square = {chi2_observed:.2f}"
+    )
+
+    # Shade the right tail
+    axes[1].axvspan(
+        chi2_observed,
+        max(simulated_chi2),
+        color="red",
+        alpha=0.2,
+        label=f"Monte Carlo p-value = {p:.4f}"
+    )
+
+
+    axes[1].set_title("Monte Carlo Chi-square Null Distribution")
+    axes[1].set_xlabel("Simulated Chi-square Statistics")
+    axes[1].set_ylabel("Probability Density")
+    axes[1].legend()
+
+    # Adjust spacing
+    plt.tight_layout()
+
+    # Display both plots together
+    plt.show()
+    
     return
 
 def main():
     rock_slopes = importData()
-    risk_summary = chiSquared(rock_slopes)
-    monteCarlo(risk_summary)
+    chi_data = chiSquared(rock_slopes)
+    monte_carlo_data = monteCarlo(chi_data[0])
+    gui(chi_data[1], monte_carlo_data[0], monte_carlo_data[1], monte_carlo_data[2])
 
 if __name__ == "__main__":
     main()
